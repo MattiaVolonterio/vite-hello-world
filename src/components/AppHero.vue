@@ -1,7 +1,9 @@
 <script>
 export default {
   data() {
-    return {};
+    return {
+      title: "Questo è un paragrafo di prova",
+    };
   },
 };
 </script>
@@ -16,7 +18,7 @@ export default {
       />
     </div>
     <div class="text-container">
-      <h2 class="hero-title">Questo è un paragrafo di prova</h2>
+      <h2 class="hero-title">{{ title }}</h2>
       <p class="hero-par">
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugiat ut
         perspiciatis sed. Laborum, fugit quia quas distinctio molestiae sunt

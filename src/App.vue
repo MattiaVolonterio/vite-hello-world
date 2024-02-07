@@ -1,47 +1,36 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<!-- ## SCRIPT -->
+<script>
+import AppTitle from "./components/AppTitle.vue";
+
+export default {
+  components: {
+    AppTitle,
+  },
+
+  data() {
+    return {};
+  },
+};
 </script>
 
+<!-- ## TEMPLATE -->
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <div class="container">
+    <AppTitle></AppTitle>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<!-- ## STYLE -->
+<style>
+@import url("./assets/main.css");
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+.container {
+  display: flex;
+  justify-content: center;
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
+  width: 100%;
+  height: 100vh;
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+  background-color: lightgray;
 }
 </style>

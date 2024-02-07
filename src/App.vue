@@ -17,7 +17,7 @@ export default {
 
 <!-- ## TEMPLATE -->
 <template>
-  <div class="container">
+  <div class="main-container">
     <AppTitle></AppTitle>
     <AppHero></AppHero>
   </div>
@@ -27,7 +27,7 @@ export default {
 <style>
 @import url("./assets/main.css");
 
-.container {
+.main-container {
   display: flex;
   flex-direction: column;
   justify-content: center;

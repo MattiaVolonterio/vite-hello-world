@@ -2,14 +2,23 @@
 export default {
   data() {
     return {
-      title: "Questo è un paragrafo di prova",
+      title: "Hero Section",
+      firstButtonIsShown: true,
+      secondButtonIsShown: false,
     };
+  },
+
+  methods: {
+    buttonClicked() {
+      this.firstButtonIsShown = !this.firstButtonIsShown;
+      this.secondButtonIsShown = !this.secondButtonIsShown;
+    },
   },
 };
 </script>
 
 <template>
-  <div class="container">
+  <div class="hero-container">
     <div class="logo-container">
       <img
         src="../assets/img/vite-logo.svg"
@@ -24,12 +33,28 @@ export default {
         perspiciatis sed. Laborum, fugit quia quas distinctio molestiae sunt
         odio quos suscipit, nihil minus vero dolorum nisi at, sit a.
       </p>
+      <div class="button-container">
+        <button
+          v-if="firstButtonIsShown"
+          @click="buttonClicked()"
+          class="btn btn-primary"
+        >
+          Cliccami
+        </button>
+        <button
+          v-if="secondButtonIsShown"
+          @click="buttonClicked()"
+          class="btn btn-outline-secondary"
+        >
+          Adesso clicca me
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
-.container {
+.hero-container {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
